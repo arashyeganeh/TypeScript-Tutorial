@@ -48,7 +48,52 @@ Install Node.js by following this [Link](https://nodejs.org/en), and then execut
 npm install -g typescript
 ```
 
+To use the TypeScript Compiler, execute the following command in your terminal:
 
+```bash
+tsc script.js
+```
 
+## First Project
 
+Generate an `index.html` file containing the following code:
 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TypeScript Tutorial</title>
+    <script></script>
+</head>
+<body>
+    <h1>Run TypeScript Compiler</h1>
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+Next, create a `script.ts` file and include the following code:
+
+```typescript
+let message: string = 'Hello World';
+alert(message)
+```
+
+For compile TypeScript to Javascript, execute the following command in your terminal:
+
+```bash
+tsc script.ts
+```
+
+Finally, we now have a file named `script.js`
+
+```javascript
+var message = 'Hello World';
+alert(message);
+```
+
+open `index.html`
+
+![](example/1.First_Project/img.PNG)
+
+[Project Files](example/1.First_Project)
