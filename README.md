@@ -97,3 +97,21 @@ open `index.html`
 ![](example/1.First_Project/img.PNG)
 
 [Project Files](example/1.First_Project)
+
+## Type Annotations
+
+TypeScript is a typed language where we specify data types using colons after variable `: type`, parameter, or property names and it includes JavaScript's core data types: number, string, and boolean.
+
+```typescript
+const age: number = 32; // number variable
+const surname: string = "John";// string variable
+const isUpdated: boolean = true;// Boolean variable
+
+function display(age:number, surname:string, isUpdated: boolean){
+    console.log("Age = " + age + ", Name = " + surname, "isUpdated = " + isUpdated);
+}
+
+display(age, surname, isUpdated)
+```
+
+Type annotations in TypeScript are optional but enforce type checking, aiding the compiler in error prevention and code readability for future developers.
