@@ -23,7 +23,7 @@ The TypeScript type system encompasses the following aspects:
 1. Write TypeScript Code
 	```typescript
 	function addNumbers(a: number, b: number): number {
-    return a + b;
+        return a + b;
 	}
 	const sum: number = addNumbers(5, 10);
 	console.log(`The sum is: ${sum}`);
@@ -145,7 +145,7 @@ TypeScript has three frequently used primitive data types: `string`, `number`, a
   !null; // true
   Number.isNaN(1 + null); // false
   Number.isNaN(1 + undefined); // true
-  typeof void 0 //undefined
+  typeof void 0 // "undefined"
   ```
 
 * `symbol` is a **unique** and **immutable** primitive value and may be used as the key of an Object property. The purpose of symbols is to create unique property keys that are guaranteed not to clash with keys from other code.
