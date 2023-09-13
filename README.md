@@ -98,6 +98,75 @@ open `index.html`
 
 [Project Files](example/1.First_Project)
 
+## Data Types
+
+TypeScript has three frequently used primitive data types: `string`, `number`, and `boolean`. 
+
+* `string` is used to represent textual values, such as
+
+  *  `"Hello, world."`
+  * `'Hello, world.'`
+  * `""` or `''`
+
+  ```javascript
+  var name = "Arash Yeganeh"
+  ```
+
+* `number` is utilized for numeric values, such as
+
+  * .003
+  * -10000
+  * 100000000
+
+  ```javascript
+  var price = 100
+  ```
+
+* `boolean` is employed for the two possible values: `true` and `false`.
+
+  ```javascript
+  var isAdmin = false
+  ```
+
+* `null` and `undefined` are two special types, which represent the absence of a value or a variable that has not been assigned a value yet.
+
+  ```javascript
+  let x;
+  if (typeof x === "undefined" && x === void 0) {
+    console.log("x is undefined")
+  }
+  
+  typeof null; // "object" (not "null" for legacy reasons)
+  typeof undefined; // "undefined"
+  null === undefined; // false
+  null == undefined; // true
+  null === null; // true
+  null == null; // true
+  !null; // true
+  Number.isNaN(1 + null); // false
+  Number.isNaN(1 + undefined); // true
+  typeof void 0 //undefined
+  ```
+
+* `symbol` is a **unique** and **immutable** primitive value and may be used as the key of an Object property. The purpose of symbols is to create unique property keys that are guaranteed not to clash with keys from other code.
+
+  ```javascript
+  var Symbol = Symbol("Symbol");
+  ```
+
+*  `bigint` is a data type introduced in ES11 (ES2020) that allows the representation of large integers beyond the capabilities of the number type. With `BigInts`, you can safely store and operate on large integers even beyond the safe integer limit ([`Number.MAX_SAFE_INTEGER`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)) for Numbers.
+
+  ```javascript
+  var BigInt = 1234567890123456789012345678901234567890n;
+  ```
+
+  > ⚠️ The JavaScript `Number.MAX_SAFE_INTEGER` is a constant number that represents the maximum safe integer. This constant has integers between -(2<sup>53</sup> – 1) and 2<sup>53</sup> – 1. Here safe refers to the ability to represent integers and to compare them.
+  >
+  > ```javascript
+  > console.log(Number.MAX_SAFE_INTEGER)
+  > console.log(Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2) // ⚠️True
+  > ```
+
 ## Type Annotations
 
 TypeScript is a typed language where we specify data types using colons after variable `: type`, parameter, or property names and it includes JavaScript's core data types: number, string, and boolean.
